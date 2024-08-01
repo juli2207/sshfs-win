@@ -1,0 +1,36 @@
+[Package]
+version: 1
+depends: 
+
+[Product]
+type: localboot
+id: sshfs-win
+name: SSHFS-Win
+description: 
+advice: 
+version: 3.7.21011
+priority: 0
+licenseRequired: False
+productClasses: 
+setupScript: setup.opsiscript
+uninstallScript: uninstall.opsiscript
+updateScript: 
+alwaysScript: 
+onceScript: 
+customScript: 
+userLoginScript: 
+
+[ProductDependency]
+action: setup
+requiredProduct: winfsp-20-23075
+requiredStatus: installed
+requirementType: before
+
+[ProductProperty]
+type: unicode
+name: install_architecture
+multivalue: False
+editable: False
+description: Welche Architekur (32 / 64 Bit) soll installiert werden?
+values: ["32 only","64 only","both","system specific"]
+default: ["system specific"]
